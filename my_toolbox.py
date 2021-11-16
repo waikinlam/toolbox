@@ -188,11 +188,22 @@ def cal_median(data_list):
     median_answer = [round(num, 2) for num in median_answer]
     return median_answer
 
+def output(data_list,date,data,calmean,calmedian,upanddown,gainorloss):
+
+    header = ['Date','Data','Mean','Median','Up/Down','Gain/Loss']
+    hd = ','.join(str(e) for e in header)
+    file = open('output_1.csv', 'w')
+    file.write('%s\n'%(hd))
+    for i in data_list:
+        index = data_list.index(i)
+        o = [date[index],data[index],calmean[index],calmedian[index],upanddown[index],gainorloss[index]]
+        output = ','.join(str(e) for e in o)
+        file.write('%s\n'%(output))
 def output_csv(data_list,date,data,calmean,calmedian,upanddown,gainorloss):
 
     header = ['Date','Data','Mean','Median','Up/Down','Gain/Loss']
     hd = ','.join(str(e) for e in header)
-    file = open('output.csv', 'w')
+    file = open('output_2.csv', 'w')
     file.write('%s\n'%(hd))
     for i in data_list:
         index = data_list.index(i)

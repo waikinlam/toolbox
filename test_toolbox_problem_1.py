@@ -20,7 +20,7 @@ def my_test():
     calmedian = mtb.cal_median(data)
     upanddown = mtb.up_and_down(data)
     gainorloss = mtb.gain_or_loss(data)
-    mtb.output_csv(data,date,data,calmean,calmedian,upanddown,gainorloss)
+    mtb.output(data,date,data,calmean,calmedian,upanddown,gainorloss)
     mtb.graph(upanddown,gainorloss, date)      
 def main():
     my_test()

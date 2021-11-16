@@ -11,8 +11,8 @@ def my_test():
     med = mtb.median(data)
     print(f"{med:0.2f}")
     '''
-    start = input('Input the start date(e.g. 08/30/2004): ')
-    end = input('Input the close date(e.g. 08/30/2004): ')
+    start = input('Input the start date(e.g. 8/30/2004): ')
+    end = input('Input the close date(e.g. 8/30/2004): ')
     star,en = mtb.get_start_end_csv(start,end)
     data = mtb.get_data_list_csv(star,en)
     date = mtb.get_date_list_csv(star,en)
